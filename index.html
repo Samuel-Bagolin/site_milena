@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes" />
+  <title>Milena Siqueira – Fonoaudióloga | Voz e Comunicação para Adultos</title>
+  <meta name="description" content="Fonoaudióloga especialista em voz e comunicação para adultos. Doutora em Distúrbios da Comunicação. Atendimento online ou presencial. Curitiba." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f5f0;
+      color: #1f2e3a;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #1f2e3a;
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 60px;
+      height: 3px;
+      background: #7ba7c9;
+      border-radius: 4px;
+    }
+    .section-sub {
+      font-size: 1.1rem;
+      color: #4b5f6e;
+      margin-top: 0.8rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      background-color: #3d5a73;
+      color: white;
+      border: none;
+      padding: 0.9rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 14px rgba(61, 90, 115, 0.25);
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background-color: #2d4a62;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(61, 90, 115, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #3d5a73;
+      color: #3d5a73;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      background: #3d5a73;
+      color: white;
+    }
+
+    /* navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-wrapper img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      color: #1f2e3a;
+    }
+    .logo-text small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      color: #4b5f6e;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links a {
+      margin-left: 1.8rem;
+      color: #2d3a44;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.15s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #7ba7c9;
+      color: #1f2e3a;
+    }
+
+    /* hero */
+    .hero {
+      padding: 2rem 0 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero-content {
+      flex: 1 1 45%;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+    }
+    .hero-content .subhead {
+      font-size: 1.2rem;
+      color: #3d5a73;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+    .hero-image {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      background: #e5edf3;
+      aspect-ratio: 1/1.2;
+      object-fit: cover;
+      width: 100%;
+      max-height: 440px;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* pills */
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+      margin: 1.2rem 0;
+    }
+    .pill {
+      background: white;
+      padding: 0.5rem 1.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      color: #1f2e3a;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid #d9e0e6;
+      font-size: 0.95rem;
+    }
+    .pill.blue {
+      background: #e5edf3;
+      border-color: #b8cedb;
+      color: #1f3b4a;
+    }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+    .bio-text {
+      font-size: 1.05rem;
+      color: #1f2e3a;
+      max-width: 700px;
+    }
+    .bio-text p {
+      margin-bottom: 1rem;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: white;
+      padding: 1.8rem 1.2rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      border: 1px solid #e5edf3;
+      transition: 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+    .card h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      color: #1f2e3a;
+    }
+    .card p {
+      color: #3d5a73;
+      font-size: 0.95rem;
+    }
+
+    .publicacao-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      border: 1px solid #e5edf3;
+      margin-bottom: 1rem;
+      align-items: center;
+      transition: 0.2s;
+    }
+    .publicacao-item:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    .publicacao-item img {
+      max-width: 110px;
+      border-radius: 8px;
+      background: #d9e0e6;
+      object-fit: cover;
+    }
+    .publicacao-item .info {
+      flex: 1;
+    }
+    .publicacao-item .info a {
+      color: #3d5a73;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.15s;
+    }
+    .publicacao-item .info a:hover {
+      border-bottom-color: #3d5a73;
+    }
+
+    /* depoimentos */
+    .depo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .depo-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 24px;
+      border-left: 6px solid #7ba7c9;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      transition: 0.2s;
+    }
+    .depo-card:hover {
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+    .depo-card p {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #1f2e3a;
+    }
+    .depo-card .autor {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #3d5a73;
+    }
+    .depo-card .autor small {
+      font-weight: 400;
+      color: #4b5f6e;
+      font-style: normal;
+    }
+
+    .contato-social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+      margin: 2rem 0 1rem;
+      padding: 1.5rem 2rem;
+      background: white;
+      border-radius: 28px;
+      border: 1px solid #e5edf3;
+    }
+    .contato-social .social-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .contato-social .social-links a {
+      color: #2d3a44;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1.05rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .contato-social .social-links a:hover {
+      border-bottom-color: #7ba7c9;
+    }
+    .contato-social .social-links a img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .mapa iframe {
+      width: 100%;
+      border-radius: 20px;
+      border: 0;
+      height: 220px;
+      margin-top: 0.5rem;
+    }
+
+    .footer {
+      border-top: 1px solid #d9e0e6;
+      padding: 2rem 0;
+      text-align: center;
+      color: #4b5f6e;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    /* whatsapp float com ícone PNG */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      z-index: 999;
+      transition: 0.15s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+      background: #1da851;
+    }
+    .whatsapp-float img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-content h1 { font-size: 2.5rem; }
+      .cta-group { justify-content: center; }
+      .bio-grid { grid-template-columns: 1fr; }
+      .depo-grid { grid-template-columns: 1fr; }
+      .nav-links a { margin-left: 1rem; font-size: 0.85rem; }
+      .logo-text { font-size: 1rem; }
+      .contato-social { align-items: center; text-align: center; }
+      .contato-social .social-links { justify-content: center; }
+      h2::after { left: 50%; transform: translateX(-50%); }
+      h2 { display: block; text-align: center; }
+      .section-sub { text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 2rem; }
+      .service-cards { grid-template-columns: 1fr; }
+      .pill-grid { justify-content: center; }
+      .logo-wrapper img { height: 38px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WhatsApp Float com ícone PNG -->
+  <a href="https://api.whatsapp.com/send/?phone=%2B5541996348872&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="WhatsApp" />
+  </a>
+
+  <header class="container">
+    <div class="navbar">
+      <div class="logo-wrapper">
+        <img src="https://i.ibb.co/xqjyTy3L/Captura-de-tela-2026-08-02-153450-removebg-preview-1.png" alt="Logo Milena Siqueira" />
+        <div class="logo-text">
+          Milena Siqueira
+          <small>Fonoaudiologia · Voz · Comunicação</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#publicacoes">Publicações</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero" id="hero">
+      <div class="hero-content">
+        <h1>Encontre sua voz.<br>Transforme sua comunicação.</h1>
+        <p class="subhead">Fonoaudióloga especialista em voz, doutora em Distúrbios da Comunicação, atendimento para adultos (Online ou Presencial).</p>
+        <div class="cta-group">
+          <a href="https://api.whatsapp.com/send/?phone=%2B5541996348872&text&type=phone_number&app_absent=0" target="_blank" class="btn-primary">Agende sua avaliação</a>
+          <a href="#sobre" class="btn-outline">Conheça o método</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://i.ibb.co/5xrHPxBj/Whats-App-Image-2026-08-02-at-14-51-52.jpg" alt="Milena Siqueira, fonoaudióloga" />
+      </div>
+    </section>
+
+    <!-- QUEM É MILENA -->
+    <section class="container" id="sobre" style="padding: 2rem 0;">
+      <h2 class="fade-up">Quem é a Milena</h2>
+      <div class="bio-grid">
+        <div>
+          <h3 style="font-family: 'Inter', sans-serif; font-weight: 500; color: #3d5a73; margin-top: 1.2rem;">Formação</h3>
+          <div class="pill-grid">
+            <span class="pill blue">Fonoaudióloga</span>
+            <span class="pill blue">Formada pela USP</span>
+            <span class="pill blue">Especialista em voz (CFa)</span>
+            <span class="pill blue">Doutora em Distúrbios da Comunicação (UTP)</span>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family: 'Inter', sans-serif; font-weight: 500; color: #3d5a73; margin-top: 1.2rem;">Atuação</h3>
+          <div class="pill-grid">
+            <span class="pill">Professora universitária</span>
+            <span class="pill">Atendimento individual</span>
+            <span class="pill">Palestras e treinamentos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bio-text fade-up">
+        <p><strong>Milena Siqueira</strong> é fonoaudióloga formada pela USP, especialista em voz pelo CFa e doutora em Distúrbios da Comunicação pela UTP. Dedica sua carreira a potencializar a expressão e a comunicação humana, com o propósito de ajudar pessoas a encontrarem sua própria voz.</p>
+        <p>Atua como professora acadêmica, palestrante e facilitadora corporativa, além de atendimentos individuais como fonoterapeuta. É criadora do <strong>Programa Mi Fala</strong>, voltado ao desenvolvimento da comunicação com autenticidade e impacto.</p>
+        <p>Já impactou profissionais e organizações em instituições como Risotolândia, Institutos LACTEC, Fiocruz, Escola Anjo da Guarda, Colégio Marista e Prefeitura Municipal de Curitiba, entre outras.</p>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="container" id="servicos" style="padding: 2rem 0;">
+      <h2 class="fade-up">Áreas de atuação</h2>
+      <p class="section-sub fade-up">Foco no público adulto, com abordagem personalizada e acolhedora.</p>
+      <div class="service-cards">
+        <div class="card fade-up"><h3>Atendimento individual</h3><p>Terapia de voz para adultos — disfonias, uso profissional da voz, ansiedade de comunicação.</p></div>
+        <div class="card fade-up"><h3>Palestras e treinamentos</h3><p>Conteúdo aplicado para empresas e equipes que desejam melhorar a comunicação.</p></div>
+        <div class="card fade-up"><h3>Consultoria para profissionais</h3><p>Professores, advogados, locutores, líderes — potencialize sua voz no trabalho.</p></div>
+        <div class="card fade-up"><h3>Programa Mi Fala</h3><p>Desenvolvimento da comunicação com autenticidade e impacto.</p></div>
+      </div>
+    </section>
+
+    <!-- PUBLICAÇÕES -->
+    <section class="container" id="publicacoes" style="padding: 2rem 0;">
+      <h2 class="fade-up">Publicações de alcance nacional</h2>
+      <div class="publicacao-item fade-up">
+        <img src="https://i.ibb.co/F4VxvYNR/Captura-de-tela-2026-08-02-153242.png" alt="E-book Fonoaudiólogo" />
+        <div class="info">
+          <strong>E-book "Fonoaudiólogo: o que fazer com a voz do professor"</strong> — distribuído pela Sociedade Brasileira de Fonoaudiologia.<br />
+          <a href="https://www.sbfa.org.br/portal2017/themes/2017/departamentos/artigos/materiais_37.pdf" target="_blank">📄 Acesse o PDF</a>
+        </div>
+      </div>
+      <div class="publicacao-item fade-up">
+        <img src="https://www.booktoy.com.br/image/cache/catalog/livros/96/13206-600x600.jpg" alt="Livro-jogo Pescadores de Conversas" />
+        <div class="info">
+          <strong>Livro-jogo "Pescadores de Conversas"</strong> — livro em caixinha para desenvolvimento da comunicação humana.<br />
+          <a href="https://www.booktoy.com.br/index.php?route=product/product&product_id=13206" target="_blank">🔗 Comprar agora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS (dois) -->
+    <section class="container" id="depoimentos" style="padding: 2rem 0;">
+      <h2 class="fade-up">Depoimentos</h2>
+      <div class="depo-grid">
+        <div class="depo-card fade-up">
+          <p>“O tratamento com a Milena é ótimo pois ela é uma profissional completa! Pensa no todo e não só na voz. Sou professora e tratei com ela um nódulo nas cordas vocais e dores de cabeça por forçar muito a voz. Foi um procedimento diferenciado de todos os outros que eu já tinha feito, indo além dos exercícios apenas para a voz e pensando no corpo em geral.”</p>
+          <div class="autor">— Ensa Siqueira</div>
+        </div>
+        <div class="depo-card fade-up">
+          <p>“O processo com a Milena foi leve e individualizado. Ela trouxe ferramentas modernas e um acolhimento emocional que fez toda a diferença. Recomendo fortemente para quem busca evolução na comunicação.”</p>
+          <div class="autor">— Paciente atendida em consultório</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="container" id="contato" style="padding: 2rem 0 1rem;">
+      <div class="contato-social fade-up">
+        <div class="social-links">
+          <a href="https://api.whatsapp.com/send/?phone=%2B5541996348872&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="WhatsApp" style="width:26px;height:26px;" />
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/milenasiqueirafono/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#3d5a73"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+        <div style="width:100%;">
+          <p style="font-weight:500; margin-bottom:0.3rem;">📍 R. Prof. João Doetzer, 303 - Jardim das Américas, Curitiba - PR, 81540-190</p>
+          <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28813.379135350322!2d-49.2862551!3d-25.467044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce470f0c1865f%3A0x2c7fa24794a3fe9e!2sR.%20Prof.%20Jo%C3%A3o%20Doetzer%2C%20303%20-%20Jardim%20das%20Am%C3%A9ricas%2C%20Curitiba%20-%20PR%2C%2081540-190!5e0!3m2!1spt-BR!2sbr!4v1712770000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="logo-wrapper" style="justify-content:center; margin-bottom:0.3rem;">
+      <img src="https://i.ibb.co/xqjyTy3L/Captura-de-tela-2026-08-02-153450-removebg-preview-1.png" alt="Logo Milena" style="height:36px;" />
+      <div class="logo-text" style="font-size:1rem;">Milena Siqueira <small>Fonoaudiologia · Voz · Comunicação</small></div>
+    </div>
+    <p>© 2026 Milena Siqueira. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
