@@ -19,7 +19,7 @@
       background-color: #f8f5f0;
       color: #1f2e3a;
       font-family: 'Inter', sans-serif;
-      line-height: 1.5;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
@@ -258,6 +258,7 @@
       font-size: 0.95rem;
     }
 
+    /* publicações */
     .publicacao-item {
       display: flex;
       flex-wrap: wrap;
@@ -293,6 +294,57 @@
       border-bottom-color: #3d5a73;
     }
 
+    /* artigo */
+    .artigo-box {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      border: 1px solid #e5edf3;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: 0.2s;
+      margin-top: 1rem;
+    }
+    .artigo-box:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    .artigo-box .artigo-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .artigo-box .artigo-info .badge-artigo {
+      background: #e5edf3;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #3d5a73;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .artigo-box .artigo-info span {
+      font-weight: 500;
+      color: #1f2e3a;
+    }
+    .artigo-box .artigo-link {
+      color: #3d5a73;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #7ba7c9;
+      padding-bottom: 2px;
+      transition: 0.15s;
+      white-space: nowrap;
+    }
+    .artigo-box .artigo-link:hover {
+      color: #2d4a62;
+      border-bottom-color: #3d5a73;
+    }
+
     /* depoimentos */
     .depo-grid {
       display: grid;
@@ -320,11 +372,6 @@
       margin-top: 1rem;
       font-weight: 600;
       color: #3d5a73;
-    }
-    .depo-card .autor small {
-      font-weight: 400;
-      color: #4b5f6e;
-      font-style: normal;
     }
 
     .contato-social {
@@ -380,7 +427,7 @@
       margin-top: 2rem;
     }
 
-    /* whatsapp float com ícone PNG */
+    /* whatsapp float */
     .whatsapp-float {
       position: fixed;
       bottom: 24px;
@@ -418,6 +465,14 @@
       transform: translateY(0);
     }
 
+    /* RESPONSIVO */
+    @media (max-width: 992px) {
+      .depo-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+    }
+
     @media (max-width: 800px) {
       .hero {
         flex-direction: column;
@@ -434,18 +489,38 @@
       h2::after { left: 50%; transform: translateX(-50%); }
       h2 { display: block; text-align: center; }
       .section-sub { text-align: center; }
+      .artigo-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2rem;
+      }
+      .artigo-box .artigo-info {
+        justify-content: center;
+      }
+      .artigo-box .artigo-link {
+        white-space: normal;
+      }
     }
+
     @media (max-width: 480px) {
       .hero-content h1 { font-size: 2rem; }
       .service-cards { grid-template-columns: 1fr; }
       .pill-grid { justify-content: center; }
       .logo-wrapper img { height: 38px; }
+      .logo-text { font-size: 0.9rem; }
+      .logo-text small { font-size: 0.65rem; }
+      .navbar { gap: 0.3rem; }
+      .nav-links a { margin-left: 0.6rem; font-size: 0.75rem; }
+      .hero-image img { max-height: 300px; }
+      .depo-card { padding: 1.2rem; }
+      .depo-card p { font-size: 0.95rem; }
+      .contato-social { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- WhatsApp Float com ícone PNG -->
+  <!-- WhatsApp Float -->
   <a href="https://api.whatsapp.com/send/?phone=%2B5541996348872&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/174/174879.png" alt="WhatsApp" />
   </a>
@@ -527,9 +602,19 @@
       </div>
     </section>
 
-    <!-- PUBLICAÇÕES -->
+    <!-- PUBLICAÇÕES + ARTIGO -->
     <section class="container" id="publicacoes" style="padding: 2rem 0;">
       <h2 class="fade-up">Publicações de alcance nacional</h2>
+
+      <!-- Artigo científico -->
+      <div class="artigo-box fade-up">
+        <div class="artigo-info">
+          <span class="badge-artigo">Artigo científico</span>
+          <span>Conteúdos didáticos nas intervenções de saúde vocal — Milena Siqueira</span>
+        </div>
+        <a href="https://revistas.pucsp.br/index.php/dic/article/view/33696" target="_blank" class="artigo-link">📄 Ler artigo →</a>
+      </div>
+
       <div class="publicacao-item fade-up">
         <img src="https://i.ibb.co/F4VxvYNR/Captura-de-tela-2026-08-02-153242.png" alt="E-book Fonoaudiólogo" />
         <div class="info">
@@ -546,7 +631,7 @@
       </div>
     </section>
 
-    <!-- DEPOIMENTOS (dois) -->
+    <!-- DEPOIMENTOS -->
     <section class="container" id="depoimentos" style="padding: 2rem 0;">
       <h2 class="fade-up">Depoimentos</h2>
       <div class="depo-grid">
